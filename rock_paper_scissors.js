@@ -180,6 +180,8 @@ function playAgain() {
 // starts the round upon button click
 function handleClick() {
     playerSelection = this.className;
+    audio.play();
+    audio.currentTime = 0;
     computerSelection = computerPlay();
     playRound(playerSelection, computerSelection);
 }
@@ -211,6 +213,8 @@ const results = document.querySelector(".results");
 const summary = document.querySelector(".game-summary");
 const resultsContainer = document.querySelector(".results > .container");
 const restart = document.querySelector(".container > button");
+
+const audio = document.querySelector("audio");
 
 // event listeners
 rock.addEventListener("click", handleClick);
