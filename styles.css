@@ -1,0 +1,218 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+/* ------------------------------------------ */
+
+.active {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: "Poppins", sans-serif;
+}
+
+.active > * {
+    flex: 1;
+}
+
+/* ------------------------------------------ */
+/* Title section */
+
+.title {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    color: #747474;
+    background-color: #272727;
+    padding: 10px 0;
+}
+
+.title h1, .title h2 {
+    margin: 0;
+}
+
+.rpc {
+    display: flex;
+    justify-content: center;
+    gap: 120px;
+    font-size: 30px;
+    margin: auto;
+}
+
+/* ------------------------------------------ */
+
+.container {
+    background-color: #747474;
+}
+
+/* ------------------------------------------ */
+/* Score/play area */
+
+.play-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 50px;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.play-area h2 {
+    margin-bottom: 0 ;
+}
+
+.plays {
+    display: flex;
+    gap: 100px;
+}
+
+.left, .right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.plays img {
+    padding: 20px;
+    width: auto;
+    height: 100px;
+    border: 5px groove black;
+    border-radius: 10%;;
+}
+
+/* ------------------------------------------ */
+/* Choice select area */
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding-bottom: 30px;
+}
+
+button {
+    padding: 0;
+    border-style: none;
+    padding: 20px;
+    border-radius: 10%;
+    transition: all .2s;
+}
+
+button.rock {
+    border: 5px solid #ff652f;
+}
+
+button.paper {
+    border: 5px solid #4aa3af;
+}
+
+button.scissors {
+    border: 5px solid #ffe400;
+}
+
+button.rock:hover {
+    border: 5px solid black;
+    transform: scale(1.05);
+    box-shadow: 0 0 50px #ff652f;
+}
+
+button.paper:hover {
+    border: 5px solid black;
+    transform: scale(1.05);
+    box-shadow: 0 0 50px #4aa3af;
+}
+
+button.scissors:hover {
+    border: 5px solid black;
+    transform: scale(1.05);
+    box-shadow: 0 0 50px #ffe400;
+}
+
+.buttons img {
+    width: auto;
+    max-height: 150px;
+}
+
+.buttons p {
+    margin-bottom: 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* ------------------------------------------ */
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.footer, .footer a {
+    text-align: center;
+    background-color: #272727;
+    color:rgb(207, 207, 207);
+    font-size: 20px;
+    padding: 10px 0;
+}
+
+/* ------------------------------------------ */
+/* results screen */
+
+.results {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 300px;
+    background-color: #747474;
+}
+
+.results .container {
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #272727;
+    padding: 100px;
+    border-radius: 10%;
+    color: rgb(207, 207, 207);
+    margin-bottom: 200px;
+}
+
+.game-over {
+    margin: 0;
+    font-size: 50px;
+}
+
+.game-summary {
+    margin: 0;
+    font-size: 30px;
+}
+
+.restart-btn {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background-color: #747474;
+    border: 2px solid #747474;
+    font-size: 25px;
+    width: 200px;
+}
+
+.restart-btn:hover {
+    border: 2px solid black;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px white;     
+}
+
+/* ------------------------------------------ */
+
+.hide {
+    display: none;
+}

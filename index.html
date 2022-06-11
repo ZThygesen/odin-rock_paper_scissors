@@ -4,9 +4,61 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title> 
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <title>Rock, Paper, Scissors</title> 
 </head>
 <body>
+    <div class="active">
+        <div class="title">
+            <div class="rpc">
+                <h1 style="color: #ff652f">Rock</h1>
+                <h1 style="color: #4aa3af">Paper</h1>
+                <h1 style="color: #ffe400">Scissors</h1>
+            </div>
+        </div>
+        <div class="container">
+            <div class="play-area">
+                <h2 style="margin-top: 5px;">First to 5</h2>
+                <div class="plays">
+                    <div class="left">
+                        <p>YOU</p>
+                        <div class="player-play">
+                            <img src="./images/question-mark.png" alt="Your pick">
+                        </div>
+                        <p id="player">0</p>               
+                    </div>
+                    <div class="right">
+                        <p>COMPUTER</p>
+                        <div class="computer-play">
+                            <img src="./images/question-mark.png" alt="Computer pick">
+                        </div>
+                        <p id="computer">0</p>
+                    </div>
+                </div>    
+                <div class="round-update">
+                    Make your pick!
+                </div>
+            </div>
+            <div class="buttons">
+                <button class="rock" style="background-color: #ff652f;"><img src="./images/rock.png" alt="Rock"><p>Rock</p></button>
+                <button class="paper" style="background-color: #4aa3af;"><img src="./images/paper.png" alt="Paper"><p>Paper</p></button>
+                <button class="scissors" style="background-color: #ffe400;"><img src="./images/scissors.png" alt="Scissors"><p>Scissors</p></button>
+            </div>
+        </div>
+        <div class="footer">
+            Made by <a href="https://github.com/ZThygesen">ZThygesen</a>
+        </div>
+    </div>
+    <div class="results hide">
+        <div class="container">
+            <h1 class="game-over">Game over!</h1>
+            <p class="game-summary"></p>
+            <button class="restart-btn">Play Again</button>
+        </div>
+    </div>
     <script src="./rock_paper_scissors.js"></script>
 </body>
 </html>
