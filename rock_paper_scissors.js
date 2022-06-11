@@ -141,6 +141,14 @@ function updateBoard(results) {
 
 // when the game is over, toggle to results screen and prompt for play again
 function gameOver() {
+    if (playerScore < computerScore) {
+        const audio = document.querySelector(".lose-game");
+        audio.play();
+    } else {
+        const audio = document.querySelector(".win-game");
+        audio.play();
+    }
+
     // changes screens
     active.classList.add("hide");
     results.classList.remove("hide");
@@ -152,6 +160,9 @@ function gameOver() {
 
 // resets the game in order to begin playing again
 function playAgain() {
+    const audio = document.querySelector(".restart");
+    audio.play();
+
     playerScore = 0;
     computerScore = 0;
 
@@ -180,6 +191,7 @@ function playAgain() {
 // starts the round upon button click
 function handleClick() {
     playerSelection = this.className;
+    const audio = document.querySelector(`.audio-${playerSelection}`);
     audio.play();
     audio.currentTime = 0;
     computerSelection = computerPlay();
@@ -213,8 +225,6 @@ const results = document.querySelector(".results");
 const summary = document.querySelector(".game-summary");
 const resultsContainer = document.querySelector(".results > .container");
 const restart = document.querySelector(".container > button");
-
-const audio = document.querySelector("audio");
 
 // event listeners
 rock.addEventListener("click", handleClick);
